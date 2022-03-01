@@ -1,0 +1,102 @@
+.modallogin {
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+
+  .card {
+    position: fixed;
+    width: 30vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: white;
+
+    .container {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      position: relative;
+      padding-left: 7.5%;
+      display: grid;
+      grid-template-rows: auto auto auto auto auto auto;
+
+      .md_logo {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin-top: 2vh;
+
+        img {
+          height: 44px;
+        }
+
+        .fa-close {
+          display: block;
+          margin: auto 0 auto 0;
+          width: fit-content;
+          font-size: 16pt;
+          color: white;
+          padding: 0.5em 1em 0.5em 1em;
+          border-radius: 5px 0 0 5px;
+          background-color: $secondarylight;
+          cursor: pointer;
+        }
+        .fa-close:hover {
+          color: $accent;
+        }
+      }
+
+      .error {
+        height: 12pt;
+        line-height: 12pt;
+        text-align: center;
+        color: $accent;
+      }
+
+      h2 {
+        color: $primarydark;
+        font-size: 16pt;
+        text-align: center;
+        font-size: 20pt;
+        font-weight: bolder;
+        padding: 1em;
+      }
+
+      .form {
+        width: 85%;
+        margin: auto auto auto 0;
+        min-height: 10vh;
+        height: fit-content;
+      }
+
+      p {
+        font-size: 11pt;
+        color: $primarylight;
+        text-align: center;
+      }
+      span {
+        color: orangered;
+        cursor: pointer;
+      }
+      span:hover {
+        color: $primarydark;
+      }
+    }
+    @include maxwidth(tablet) {
+      width: 50vw !important;
+    }
+    @include maxwidth(mobile) {
+      width: 100% !important;
+      .form {
+        width: 92.5% !important;
+      }
+    }
+  }
+}

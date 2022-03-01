@@ -1,0 +1,18 @@
+.content{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    
+    .sidebar{
+        background-color: $backgroundgray;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .inside{
+        background-color: white;
+        height: 80vh;
+    }
+}

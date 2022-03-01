@@ -1,0 +1,228 @@
+.landing {
+  margin-bottom: 1em;
+
+  .ld_hero {
+    width: 100vw;
+    height: 70vh;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+    .tp {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px 7.5% 20px 7.5%;
+      background-color: rgba($color: #000000, $alpha: 0.7);
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      .logo {
+        height: 44px;
+        width: 85%;
+        object-fit: contain;
+        object-position: left;
+        display: block;
+        margin-right: auto !important;
+      }
+
+      .lg {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        gap: 1em;
+
+        button {
+          width: 100% !important;
+          height: 36px;
+          line-height: 36px;
+          border-radius: 5px;
+          margin: 0 !important;
+        }
+
+        :first-child {
+          border: 1px solid $primarydark;
+          background-color: transparent !important;
+        }
+        :first-child:hover {
+          border: 1px solid $accent;
+          color: $accent;
+          background-color: transparent !important;
+        }
+        :last-child {
+          border: 1px solid $primarydark;
+          background-color: $primarydark !important;
+        }
+        :last-child:hover {
+          border: 1px solid $accent;
+          color: $accent;
+          background-color: transparent !important;
+        }
+      }
+
+      @include maxwidth(mobile) {
+        .lg {
+          display: none !important;
+        }
+        .logo {
+          object-position: center !important;
+        }
+      }
+      @include maxwidth(tablet) {
+        .logo {
+          margin-right: auto !important;
+        }
+      }
+      @include maxwidth(desktop) {
+        .logo {
+          margin-right: auto !important;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      src: url("../assets/imgs/landing2.png") !important;
+    }
+
+    .bt {
+      position: absolute;
+      z-index: 99;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+
+      p {
+        background-color: rgba($color: $primarydark, $alpha: 0.7);
+        padding: 2em 1em 2em 1em;
+        color: white;
+        font-size: 20pt;
+        text-align: center;
+        width: fit-content;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @include maxwidth(mobile) {
+      .desktop {
+        display: none !important;
+      }
+      .mobile {
+        display: block !important;
+        width: 100% !important;
+      }
+      #header {
+        display: none !important;
+      }
+    }
+  }
+
+  button {
+    width: 20vw;
+    border-radius: 5px;
+    margin: 2em auto 2em auto;
+    display: block;
+    background-color: $primarydark;
+    border: none;
+    color: white;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+  }
+
+  .ld_bot {
+    width: 85vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+
+    .steps {
+      h2 {
+        padding-top: 1em;
+        padding-bottom: 2em;
+        color: black;
+      }
+      div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        img {
+          height: 100px;
+          object-position: center;
+          object-fit: contain;
+          display: block;
+          margin: auto;
+        }
+      }
+      h4 {
+        padding: 0.5em;
+        cursor: pointer;
+        color: $primarydark;
+        text-align: center;
+        margin-top: 2em;
+        padding: 10px;
+      }
+
+      h4:hover {
+        color: $secondarylight;
+      }
+    }
+
+    .buyer {
+      background-image: url("../assets/imgs/landing1.png");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      height: 35vh;
+
+      div {
+        height: fit-content;
+        width: 100%;
+        margin: auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        text-align: center;
+
+        h3 {
+          color: white;
+        }
+
+        h4 {
+          padding: 0.5em;
+          cursor: pointer;
+          color: $tertiarylight;
+        }
+
+        h4:hover {
+          color: white;
+        }
+      }
+    }
+
+    @include maxwidth(tablet) {
+      grid-template-columns: 1fr !important;
+    }
+
+    @include maxwidth(mobile) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+.navigation{
+  display: inline;
+  background-color: #000000;
+}

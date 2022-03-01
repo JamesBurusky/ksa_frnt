@@ -1,0 +1,120 @@
+.hero {
+  background-color: $primarydark;
+  color: white;
+
+  .container {
+    width: 85vw;
+    margin: auto;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+
+    :first-child {
+      height: fit-content;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      h1 {
+        font-size: 24pt;
+        margin-bottom: 1em;
+        width: 60%;
+        margin-right: auto;
+        line-height: 1.3;
+      }
+
+      h4 {
+        font-size: 13pt;
+        font-weight: lighter;
+        line-height: 2;
+        margin-bottom: 2em;
+      }
+
+      button {
+        height: 32px;
+        line-height: 32px;
+        border-radius: 5px;
+        font-weight: lighter;
+        font-size: 10pt;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        cursor: pointer;
+      }
+
+      .action {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1em;
+        border-radius: 5px;
+
+        :first-child {
+          border: 1px solid $primarylighter;
+          color: white;
+          background-color: transparent;
+        }
+        :first-child:hover {
+          border: 1px solid $secondarylight;
+          color: $secondarylight;
+        }
+
+        :last-child {
+          color: white;
+          background-color: $secondarylight;
+          border: 1px solid $secondarylight;
+        }
+        :last-child:hover {
+          color: $secondarylight;
+          background-color: transparent;
+          border: 1px solid $secondarylight;
+        }
+      }
+    }
+
+    img {
+      max-width: 80%;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  @include maxwidth(tablet) {
+    h1 {
+      width: 80% !important;
+      line-height: 1.3 !important;
+      font-size: 16pt !important;
+    }
+
+    h4 {
+      font-size: 11pt !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+  @include maxwidth(mobile) {
+    .container {
+      grid-template-columns: 1fr !important;
+
+      .content {
+        grid-row: 2 !important;
+      }
+    }
+
+    img {
+      height: 25vh !important;
+    }
+
+    h1 {
+      width: 100% !important;
+      font-size: 14pt !important;
+      text-align: center !important;
+    }
+
+    h4 {
+      font-size: 11pt !important;
+      line-height: 1.5 !important;
+      text-align: center !important;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.productpage {
+  width: 85vw;
+  margin: auto;
+  margin-top: 1em;
+
+  h2 {
+    font-size: 18pt;
+    margin-bottom: 1em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3em;
+
+    .prodpreview {
+      img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+      }
+
+      p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        line-height: 2;
+        letter-spacing: 1px;
+      }
+    }
+
+    .sidebar {
+      h3 {
+        color: $primarydark;
+        text-align: center;
+        font-size: 20pt;
+        font-weight: bolder;
+      }
+
+      .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        height: fit-content;
+
+        .item {
+          height: fit-content;
+          p {
+            font-size: 12pt;
+            margin-bottom: 0.5em;
+            color: $primarylight;
+          }
+
+          h4 {
+            letter-spacing: 1px;
+            margin-bottom: 0.5em;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+      }
+
+      .action {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+
+        button {
+          width: 100% !important;
+          background-color: $secondarylight;
+        }
+      }
+    }
+  }
+
+  .map {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 2em;
+
+    h4 {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      color: $secondarylight;
+    }
+  }
+
+  @include maxwidth(mobile) {
+    .container {
+      grid-template-columns: 1fr !important;
+      .prodpreview {
+        img {
+          height: 40vh !important;
+        }
+      }
+    }
+    .map {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  @include maxwidth(tablet) {
+    .container {
+      grid-template-columns: 1fr !important;
+      .prodpreview {
+        img {
+          height: 40vh !important;
+        }
+      }
+    }
+    .map {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}

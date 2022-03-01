@@ -1,0 +1,46 @@
+.navbar {
+    //width: 100vw;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    //display: grid;
+    background-color: $navpurple;
+    grid-template-columns: auto 1fr auto;
+    margin: auto;
+    //gap: 63em;
+
+    .nav {
+      align-content: center;
+      //width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(7, auto);
+      gap: 1em;
+      margin-top: auto;
+      margin-bottom: auto;
+      justify-content: center;
+      margin: auto;
+      //float: right;
+
+      h4 {
+        height: 28px;
+        //padding: 0px 0em 0px 0em;
+        line-height: 27px;
+        color: white;
+        /*font-weight: 200;*/
+        font-weight: 400;
+        font-size: 11pt;
+        text-align: center;
+        cursor: pointer;
+        //padding-bottom: 4px;
+      }
+
+      h4:hover {
+        color:bisque;
+      }
+
+      .underline {
+        border-bottom: 1px solid white;
+      }
+    }
+}

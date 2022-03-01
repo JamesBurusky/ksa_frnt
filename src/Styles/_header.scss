@@ -1,0 +1,255 @@
+.header {
+  background-color: $backgroundgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+
+  .container {
+    max-width: 85vw;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr auto;
+
+
+    .logo {
+      display: inline-flex;
+      //grid-template-columns: 2fr auto;
+      img {
+        height: 70px;
+        width: fit-content;
+        display: block;
+        cursor: pointer;
+      }
+      h3 {
+        margin: 20px 0 0 20px;
+      }
+    }
+
+    .nav1 {
+      //width: fit-content;
+      display: grid;
+      //grid-template-columns: repeat(4, auto);
+      gap: 1em;
+      margin-top: auto;
+      margin-bottom: auto;
+      //background-color: #9ecdc0;
+      //float: right;
+
+      h4 {
+        height: 32px;
+        padding: 0px 1em 0px 1em;
+        line-height: 27px;
+        color: $navpurple;
+        /*font-weight: 200;*/
+        font-weight: 600;
+        font-size: 11pt;
+        text-align: center;
+        cursor: pointer;
+        padding-bottom: 5px;
+      }
+
+      h4:hover {
+        color: $darkgray;
+      }
+
+      .underline {
+        border-bottom: 1px solid $darkgray;
+      }
+    }
+
+    .nav2 {
+      button {
+        height: 32px;
+        line-height: 32px;
+        border-radius: 5px;
+        font-weight: 200 !important;
+        font-size: 11pt;
+        text-align: center;
+        padding-left: 2em;
+        padding-right: 2em;
+        cursor: pointer;
+        color: $tertiarylight;
+        background-color: transparent;
+        border: 1px solid $tertiarylight;
+      }
+      button:hover {
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+
+  .fa-bars {
+    display: none !important;
+  }
+
+  @include maxwidth(mobile) {
+    .container {
+      grid-template-columns: 1fr auto !important;
+    }
+
+    .nav,
+    .nav2 {
+      display: none !important;
+    }
+
+    .fa-bars {
+      display: block !important;
+      color: white;
+      margin: auto;
+    }
+
+    .fa-bars:hover {
+      color: $secondarylight;
+    }
+  }
+
+  @include maxwidth(tablet) {
+    .container {
+      //grid-template-columns: 1fr auto !important;
+    }
+
+    .logo {
+      img {
+        height: 40px;
+        display: block;
+        cursor: pointer;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    .nav,
+    .nav2 {
+      display: none !important;
+    }
+
+    .fa-bars {
+      display: block !important;
+      color: white;
+      margin: auto;
+    }
+
+    .fa-bars:hover {
+      color: $secondarylight;
+    }
+  }
+}
+
+.modalheader {
+  background-color: $primarydark;
+  //width: 100vw;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+
+  .container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    //width: 90%;
+    height: 100%;
+    margin-left: auto;
+    position: relative;
+
+    .md_logo {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+
+      img {
+        height: 44px;
+      }
+
+      .fa-close {
+        display: block;
+        margin: auto 0 auto 0;
+        //width: fit-content;
+        font-size: 16pt;
+        color: white;
+        padding: 0.5em 1em 0.5em 1em;
+        border-radius: 5px 0 0 5px;
+        background-color: $secondarylight;
+      }
+    }
+
+    h2 {
+      color: #9ecdc0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 16pt;
+    }
+
+    .nav {
+      //width: 100%;
+      gap: 1em;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      h4 {
+        //width: 100%;
+        padding: 10px 10px 10px 50px;
+        color: white;
+        font-weight: 200;
+        font-size: 12pt;
+        text-align: left;
+        cursor: pointer;
+        margin-top: 1.3em;
+        margin-bottom: 1.3em;
+      }
+
+      h4:hover {
+        color: $secondarylight;
+      }
+
+      .underline {
+        background-color: $secondarylight;
+        border-radius: 50px 0 0 50px;
+      }
+
+      button {
+        //width: 100%;
+        padding: 10px 10px 10px 50px;
+        color: $tertiarylight;
+        font-weight: 200;
+        font-size: 12pt;
+        text-align: left;
+        cursor: pointer;
+        margin-bottom: 2em;
+        background-color: transparent;
+        border: none;
+      }
+
+      button:hover {
+        color: white;
+      }
+    }
+
+    .nav2 {
+      height: fit-content;
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      //width: 100%;
+      text-align: center;
+      padding-top: 2em;
+      padding-bottom: 2em;
+
+      h4 {
+        color: white;
+        padding: 1em;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  @include maxwidth(tablet) {
+    //width: 50vw !important;
+  }
+}
+
